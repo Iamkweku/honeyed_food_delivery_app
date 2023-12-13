@@ -25,6 +25,18 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "378f19b8-f13e-4735-8165-e62fab5963e7"
+      }
+    },
+    "owner": "mrkweku",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/378f19b8-f13e-4735-8165-e62fab5963e7"
     }
   }
 }
