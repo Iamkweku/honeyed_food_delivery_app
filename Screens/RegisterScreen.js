@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, Text, TextInput, TouchableOpacity, ScrollView } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, View, Text, TextInput, TouchableOpacity, Alert, ScrollView } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import axios from "axios"
 
@@ -23,22 +23,27 @@ const RegisterScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [phone, setPhoneNumber] = useState('');
   const [password, setPassword] = useState('');
+  const [data, setData] = useState()
 
   const handleRegister = async() => {
     try{
-      const response = await axios.post("https://10.21.18.88:5000/register/",
-       {full_name, email, phone, password})
+      const response = await axios.post("http://localhost:5000/register",
+       {full_name, email, password, phone})
 
-      if(response.status === 200){
-        Alert.alert("Success", "Successfuly registered")
-        navigation.navigate('Verification');
-      }else{
-        Alert.alert("Warning", "User already exist")
-      }
+       navigation.navigate('Verification');
+      // if(response.status === 200){
+      //   Alert.alert("Success", "Successfuly registered")
+      //   navigation.navigate('Verification');
+      // }else{
+      //   Alert.alert("Warning", "User already exist")
+      // }
     }catch(error){
       console.log(error)
-    }
-  };
+    }
+  };
+ 
+
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Get Started</Text>
@@ -75,7 +80,7 @@ const RegisterScreen = ({ navigation }) => {
         onChangeText={setPassword}
       />
 
-      <TouchableOpacity style={styles.signUpButton} onPress={handleRegister}>
+      <TouchableOpacity style={styles.signUpButton} onPress={() => navigation.navigate('Verification')}>
         <Text style={styles.signUpButtonText}>Sign Up</Text>
       </TouchableOpacity>
 

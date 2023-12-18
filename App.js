@@ -13,6 +13,8 @@ import HomePage from './Screens/HomePage';
 import PasswordResetRequestScreen from './Screens/PasswordResetRequestScreen';
 import PasswordResetScreen from './Screens/PasswordResetScreen';
 import PasswordResetVerifyScreen from './Screens/PasswordResetVerifyScreen';
+import Searchpage from './Screens/Searchpage';
+import Omotuo from './Screens/Omotuo';
 
 const Stack = createStackNavigator();
 
@@ -69,6 +71,9 @@ export default function App() {
         <Stack.Screen name="PasswordResetRequestScreen" component={PasswordResetRequestScreen} options={{ headerShown: false }} />
         <Stack.Screen name="PasswordResetScreen" component={PasswordResetScreen} options={{ headerShown: false }} />
         <Stack.Screen name="PasswordResetVerifyScreen" component={PasswordResetVerifyScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="Searchpage" component={Searchpage} options={{ headerShown: false }} />
+        <Stack.Screen name="Omotuo" component={Omotuo} options={{ headerShown: false }} />
+        {/* Add more screens here as needed */}
         {/* Add more screens here as needed */}
       </Stack.Navigator>
     </NavigationContainer>

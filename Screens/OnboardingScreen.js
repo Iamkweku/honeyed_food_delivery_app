@@ -88,17 +88,16 @@ const styles = StyleSheet.create({
     marginBottom: 100,
   },
   title: {
-    fontSize: 35,
+    fontSize: 20,
     color: 'black',
     textAlign: 'center',
-    marginTop: 16,
     paddingBottom: 20,
   },
   text: {
-    fontSize: 25,
+    fontSize: 17,
     color: '#437E9B',
     textAlign: 'center',
-    paddingBottom: 80,
+    paddingBottom: 150,
     // paddingHorizontal: 30,
   },
   buttonContainer: {

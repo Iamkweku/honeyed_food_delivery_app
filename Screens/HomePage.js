@@ -14,7 +14,7 @@ const HomeScreen = () => {
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        {/* <Feather name="map-pin" size={15} color="black" />  */}
+        <Feather name="map-pin" size={15} color="black" /> 
         <Text style={styles.headerText}>University of Ghana</Text>
       </View>
 
@@ -23,22 +23,22 @@ const HomeScreen = () => {
         <Text style={styles.greeting}>Hello Daniel!</Text>
 
         <View style ={styles.foodrow}>
-        <TouchableOpacity onPress={() => handlePress('Omotuo')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Omotuo')}>
           <Image source={require('../assets/Omotuo.png')} style={styles.foodImage} />
-          <Text style = {styles.foodtext}>Banku</Text>
+          <Text style = {styles.foodtext}>Omotuo</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => handlePress('Konkonte')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Konkonte')}>
           <Image source={require('../assets/Konkonte.png')} style={styles.foodImage} />
           <Text style = {styles.foodtext}>Konkonte</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => handlePress('Banku')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Banku')}>
           <Image source={require('../assets/Banku.png')} style={styles.foodImage} />
-          <Text style = {styles.foodtext}>Omotuo</Text>
+          <Text style = {styles.foodtext}>Banku</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => handlePress('friedrice')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Friedrice')}>
           <Image source={require('../assets/friedrice.png')} style={styles.foodImage} />
           <Text style = {styles.foodtext}>Fried Rice</Text>
         </TouchableOpacity>
@@ -59,12 +59,24 @@ const HomeScreen = () => {
 
         {/* Bottom Navigation Bar */}
       </ScrollView>
-      <View style={styles.bottomNav}>
+     {/* Bottom Navigation Bar */}
+     <View style={styles.bottomNav}>
+        <TouchableOpacity onPress={() => navigation.navigate('HomePage')}>
           <Feather name="home" size={30} color="black" />
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate('Searchpage')}>
           <Feather name="search" size={30} color="black" />
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate('Clipboard')}>
           <Feather name="clipboard" size={30} color="black" />
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate('User')}>
           <Feather name="user" size={30} color="black" />
-        </View>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -92,15 +104,13 @@ const styles = StyleSheet.create({
   },
   header: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    padding: 16,
+    justifyContent: 'center',
+    paddingTop:25,
     alignItems: 'center',
   },
   headerText: {
     fontSize: 20,
-    paddingLeft: 112,
-    paddingTop: 35,
-    
+    margin:5
   },
   greeting: {
     fontSize: 20,
@@ -109,7 +119,7 @@ const styles = StyleSheet.create({
     margin: 16,
   },
   foodImage: {
-    width: 175,
+    width: 160,
     height: 138, // Set your desired height
     resizeMode: 'cover',
     margin: 15,
