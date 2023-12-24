@@ -38,7 +38,7 @@ const HomeScreen = () => {
           <Text style = {styles.foodtext}>Banku</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Friedrice')}>
+        <TouchableOpacity onPress={() => navigation.navigate('FriedRice')}>
           <Image source={require('../assets/friedrice.png')} style={styles.foodImage} />
           <Text style = {styles.foodtext}>Fried Rice</Text>
         </TouchableOpacity>
@@ -69,11 +69,11 @@ const HomeScreen = () => {
           <Feather name="search" size={30} color="black" />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Clipboard')}>
+        <TouchableOpacity onPress={() => navigation.navigate('OrderScreen')}>
           <Feather name="clipboard" size={30} color="black" />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('User')}>
+        <TouchableOpacity onPress={() => navigation.navigate('ProfileScreen')}>
           <Feather name="user" size={30} color="black" />
         </TouchableOpacity>
       </View>
@@ -122,6 +122,7 @@ const styles = StyleSheet.create({
     width: 160,
     height: 138, // Set your desired height
     resizeMode: 'cover',
+    borderRadius: 10,
     margin: 15,
   },
   bottomNav: {
@@ -133,3 +134,6 @@ const styles = StyleSheet.create({
 });
 
 export default HomeScreen;
+
+
+

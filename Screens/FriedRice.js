@@ -77,17 +77,18 @@ const App = () => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.imageContainer}>
-        <Image source={require('../assets/Omotuo1.png')} style={styles.foodImage} />
+        <Image source={require('../assets/friedrice.png')} style={styles.foodImage} />
         <TouchableOpacity style={styles.backButton} onPress={goBack}>
           <Feather name="arrow-left" size={24} color="black" />
         </TouchableOpacity>
       </View>
-      <Text style={styles.title}>Omotuo (Riceballs)</Text>
+      <Text style={styles.title}>Fried Rice</Text>
       <Text style={styles.subtitle}>Main Menu</Text>
+      <Text style={styles.subtitle}>Order Above 20cedis</Text>
 
-      <MenuItem name="Omotuo (Rice balls)" price={10} onQuantityChange={updateQuantity} />
-
-      <Text style={styles.sectionHeader}>Select Preferred Soup</Text>
+      <MenuItem name="FriedRice" price={20} onQuantityChange={updateQuantity} />
+      <MenuItem name="FriedRice" price={25} onQuantityChange={updateQuantity} />
+      <Text style={styles.sectionHeader}>Select Preferred Extra</Text>
       <TouchableOpacity 
         style={styles.pickerContainer}
         onPress={() => setIsPickerVisible(!isPickerVisible)}
@@ -105,20 +106,19 @@ const App = () => {
             }}
             style={styles.picker}
           >
-            <Picker.Item label="Select Preferred Soup" value="" />
-            <Picker.Item label="Light Soup" value="Light Soup" />
-            <Picker.Item label="Palm Nut Soup" value="Palm Nut Soup" />
+            <Picker.Item label="Select Preferred Extra" value="" />
+            <Picker.Item label="Chicken" value="Chicken" />
+            <Picker.Item label="Sausage" value="Sausage" />
+            <Picker.Item label="Egg" value="Egg" />
             {/* ... More soup options ... */}
           </Picker>
         </View>
       )}
 
-      <Text style={styles.sectionHeader}>Meat</Text>
-      <MenuItem name="Cow Meat" price={10} onQuantityChange={updateQuantity} />
-      <MenuItem name="Goat Meat" price={10} onQuantityChange={updateQuantity} />
-
-      <Text style={styles.sectionHeader}>Fish</Text>
-      <MenuItem name="Fresh Tilapia" price={20} onQuantityChange={updateQuantity} />
+      <Text style={styles.sectionHeader}>Additional</Text>
+      <MenuItem name="Salad" price={0} onQuantityChange={updateQuantity} />
+      <MenuItem name="Mayonnaise" price={0} onQuantityChange={updateQuantity} />
+      <MenuItem name="Keche Up" price={0} onQuantityChange={updateQuantity} />
 
       <TouchableOpacity style={styles.addButton} onPress={addToCart}>
         <Text style={styles.addButtonText}>Add to Cart</Text>

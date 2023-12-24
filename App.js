@@ -15,6 +15,15 @@ import PasswordResetScreen from './Screens/PasswordResetScreen';
 import PasswordResetVerifyScreen from './Screens/PasswordResetVerifyScreen';
 import Searchpage from './Screens/Searchpage';
 import Omotuo from './Screens/Omotuo';
+import OrderScreen from './Screens/OrderScreen';
+import OrderSuccessScreen from './Screens/OrderSuccessScreen';
+import PaymentMethodScreen from './Screens/PaymentMethodScreen';
+import ProfileScreen from './Screens/ProfileScreen';
+import Konkonte from './Screens/Konkonte';
+import Banku from './Screens/Banku';
+import FriedRice from './Screens/FriedRice';
+import Softdrinks from './Screens/Softdrinks';
+import Liquor from './Screens/Liquor';
 
 const Stack = createStackNavigator();
 
@@ -73,6 +82,15 @@ export default function App() {
         <Stack.Screen name="PasswordResetVerifyScreen" component={PasswordResetVerifyScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Searchpage" component={Searchpage} options={{ headerShown: false }} />
         <Stack.Screen name="Omotuo" component={Omotuo} options={{ headerShown: false }} />
+        <Stack.Screen name="OrderScreen" component={OrderScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="OrderSuccessScreen" component={OrderSuccessScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="PaymentMethodScreen" component={PaymentMethodScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="ProfileScreen" component={ProfileScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="Konkonte" component={Konkonte} options={{ headerShown: false }} />
+        <Stack.Screen name="Banku" component={Banku} options={{ headerShown: false }} />
+        <Stack.Screen name="FriedRice" component={FriedRice} options={{ headerShown: false }} />
+        <Stack.Screen name="Liquor" component={Liquor} options={{ headerShown: false }} />
+        <Stack.Screen name="Softdrinks" component={Softdrinks} options={{ headerShown: false }} />
         {/* Add more screens here as needed */}
         {/* Add more screens here as needed */}
       </Stack.Navigator>

@@ -77,15 +77,15 @@ const App = () => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.imageContainer}>
-        <Image source={require('../assets/Omotuo1.png')} style={styles.foodImage} />
+        <Image source={require('../assets/Konkonte.png')} style={styles.foodImage} />
         <TouchableOpacity style={styles.backButton} onPress={goBack}>
           <Feather name="arrow-left" size={24} color="black" />
         </TouchableOpacity>
       </View>
-      <Text style={styles.title}>Omotuo (Riceballs)</Text>
+      <Text style={styles.title}>Konkonte</Text>
       <Text style={styles.subtitle}>Main Menu</Text>
 
-      <MenuItem name="Omotuo (Rice balls)" price={10} onQuantityChange={updateQuantity} />
+      <MenuItem name="Konkonte" price={5} onQuantityChange={updateQuantity} />
 
       <Text style={styles.sectionHeader}>Select Preferred Soup</Text>
       <TouchableOpacity 
